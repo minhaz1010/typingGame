@@ -10,6 +10,16 @@ let countOfwords=-1;
 let mainSentence = quote.split(' ');
 let captureTheWord='';
 let aheadOfWords = 0;
+
+function loadQuotes(){
+  fetch('https://api.quotable.io/quotes/random')
+  .then(res => res.json())
+  .then(data => displayData(data[0].content))
+}
+loadQuotes();
+function displayData(data){
+  elements.innerText=data;
+}
 document.addEventListener('keypress',(event)=>{
   if(event.key !== ' ' && event.key !=='Enter') {
     past = Date.now();
