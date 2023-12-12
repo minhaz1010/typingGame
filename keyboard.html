@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .blinking-cursor {
+      animation: blink 1s step-end infinite;
+    }
+
+    @keyframes blink {
+      50% { opacity: 0; }
+    }
+    main,section{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      /* height: full; */
+    }
+    h2{
+      font-weight: 100;
+      font-stretch: extra-expanded;
+    }
+    .highlight{
+      background-color: yellow;
+    }
+    .danger{
+      background-color: red;
+      border-radius: 20px;
+      padding: 2px;
+    }
+    .main-container #change{
+      color: lightseagreen;
+      color: rgb(38, 86, 219);
+      font-weight: 600;
+
+    }
+    fieldset{
+      width:50%;
+      height: 50%;
+    }
+    legend{
+      font-weight: bolder;
+    }
+
+     
+  </style>
+</head>
+
+<body>
+   <h1>Getting an idea from keyboard speed</h1>
+
+   <main class="main-container">
+     <h1 id="sentence">
+      The quick brown fox jumps over a lazy dog.
+     </h1>
+     <br>
+   </main>
+   <section>
+     <fieldset id="legend">
+       <legend>Your typing content show is here</legend>
+      <h1 id="typingContent"></h1>
+     </fieldset>
+   </section>
+
+   <script src="keyboard.js"></script>
+</body>
+</html>
